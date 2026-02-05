@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  background: #0f0f0f;
+  color: #eee;
+  letter-spacing: 0.08em;
+}
+
+/* ===== ヘッダー ===== */
+header {
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+header p {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* ===== メニュー ===== */
+.menu {
+  max-width: 480px;
+  margin: 0 auto 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.menu a {
+  padding: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.menu a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===== プロフィール ===== */
+.profile {
+  max-width: 700px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  filter: grayscale(30%);
+}
+
+.profile h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.profile .role {
+  margin: 8px 0 20px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.profile .text {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #ddd;
+}
+
+/* ===== フッター ===== */
+footer {
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 11px;
+  color: #666;
+}
+
+/* ===== スマホ ===== */
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
