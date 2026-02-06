@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>VOICE BOOKING</title>
+<style>
+body {
+  background:#0f0f0f;
+  color:#fff;
+  font-family: Roboto, sans-serif;
+}
+input, textarea, select {
+  width:100%;
+  background:#111;
+  color:#fff;
+  border:1px solid #333;
+  padding:12px;
+  margin-bottom:16px;
+}
+button {
+  width:100%;
+  background:#111;
+  color:#fff;
+  border:1px solid #fff;
+  padding:14px;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>VOICE BOOKING</h1>
+
+<form id="form">
+  <input name="name" placeholder="お名前" required>
+  <input name="email" placeholder="メールアドレス" required>
+  <input name="tel" placeholder="電話番号">
+
+  <input type="date" name="date" required>
+  <input type="time" name="time" required>
+
+  <select name="lessonTime" required>
+    <option value="">ボイトレ時間</option>
+    <option value="30分">30分</option>
+    <option value="60分">60分</option>
+    <option value="90分">90分</option>
+  </select>
+
+  <textarea name="note" placeholder="備考・依頼内容"></textarea>
+
+  <button>送信</button>
+</form>
+
+<script>
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const data = Object.fromEntries(new FormData(e.target));
+
+  fetch("🚨ここにGASのURL🚨", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { "Content-Type": "application/json" }
+  })
+  .then(() => {
+    alert("送信が完了しました");
+    e.target.reset();
+  })
+  .catch(() => alert("送信に失敗しました"));
+});
+</script>
+
+</body>
+</html>
