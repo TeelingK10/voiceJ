@@ -2,20 +2,29 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>VOICE BOOKING</title>
+<title>ナレーション依頼 | VOICE BOOKING</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>VOICE BOOKING</h1>
+<header>
+  <h1>ナレーション依頼</h1>
+</header>
 
+<main>
 <form id="form">
   <input name="name" placeholder="お名前" required>
   <input name="email" type="email" placeholder="メールアドレス" required>
   <input name="tel" placeholder="電話番号">
 
-  <input type="date" name="date" required>
-  <input type="time" name="time" required>
+  <!-- 日付 -->
+  <label for="date">日付</label>
+  <input type="date" name="date" id="date" required>
+
+  <!-- 時間 -->
+  <label for="time">時間</label>
+  <input type="time" name="time" id="time" required>
 
   <select name="lessonTime" required>
     <option value="">レッスン時間</option>
@@ -25,9 +34,9 @@
   </select>
 
   <textarea name="note" placeholder="備考・依頼内容"></textarea>
-
   <button type="submit">送信</button>
 </form>
+</main>
 
 <script src="script.js"></script>
 </body>
