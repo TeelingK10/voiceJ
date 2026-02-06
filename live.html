@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ナレーション依頼 | VOICE BOOKING</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>ライブ依頼</h1>
+  <p class="subtitle">VOICE BOOKING</p>
+</header>
+
+<main>
+  <form id="form">
+    <h2>依頼情報</h2>
+    <input type="hidden" name="jobType" value="ライブ">
+    <input name="name" type="text" placeholder="お名前" required>
+    <input name="email" type="email" placeholder="メールアドレス" required>
+    <input name="tel" type="tel" placeholder="電話番号">
+
+    <label for="date">日付</label>
+    <input type="date" name="date" id="date" required>
+
+    <label for="time">時間</label>
+    <input type="time" name="time" id="time" required>
+
+    <select name="lessonTime" required>
+      <option value="">ライブ時間</option>
+      <option value="30分">30分</option>
+      <option value="60分">60分</option>
+      <option value="90分">90分</option>
+    </select>
+
+    <textarea name="note" placeholder="備考・依頼内容"></textarea>
+    
+    <button type="submit">送信</button>
+  </form>
+</main>
+
+<footer>
+  <p>©VOICE BOOKING</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
