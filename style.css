@@ -1,16 +1,107 @@
+/* --- 基本スタイル --- */
 body {
   background: #0f0f0f;
   color: #ffffff;
-  font-family: sans-serif;
-  max-width: 600px;
+  font-family: 'Roboto', sans-serif;
+  max-width: 640px;
   margin: 40px auto;
+  padding: 0 16px;
+}
+
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 32px;
+  font-size: 36px;
+  margin-bottom: 8px;
 }
 
+header p {
+  text-align: center;
+  font-size: 18px;
+  color: #aaaaaa;
+}
+
+/* --- メニュー --- */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.menu-card {
+  display: block;
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.menu-card:hover {
+  background: #1a1a1a;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+}
+
+/* --- 講師プロフィール --- */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background: #111;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.profile-text {
+  text-align: center;
+}
+
+.profile-text h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile-text .role {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin: 4px 0 12px;
+}
+
+.profile-text .text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* --- フッター --- */
+footer {
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #888;
+  font-size: 14px;
+}
+
+/* --- フォーム系入力スタイル --- */
 input,
 textarea,
 select {
@@ -21,6 +112,7 @@ select {
   padding: 12px;
   margin-bottom: 16px;
   box-sizing: border-box;
+  border-radius: 8px;
 }
 
 textarea {
@@ -34,9 +126,13 @@ button {
   border: 1px solid #fff;
   padding: 14px;
   cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 button:hover {
   background: #fff;
   color: #000;
+  transform: translateY(-2px);
 }
