@@ -6,7 +6,7 @@ form.addEventListener("submit", (e) => {
   const data = Object.fromEntries(new FormData(form));
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbz0GnWKb6zKx1jDRaW6WKc2hUC5lBqipJ7vlJ5jvuOmYTmbZLprUEjryMh7XFU6mb8/exec",
+    "https://script.google.com/macros/s/AKfycbx831-_gt-26LKCvlxycEDV61BFF2jJOuYgCbFZmukm2d1FHVGw0b2SjK2Dfnjm3M8/exec",
     {
       method: "POST",
       body: JSON.stringify(data)
@@ -22,6 +22,7 @@ form.addEventListener("submit", (e) => {
     alert("送信に失敗しました");
   });
 });
+
 
 
 
