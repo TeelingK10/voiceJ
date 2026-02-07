@@ -8,7 +8,7 @@ form.addEventListener("submit", (e) => {
   const params = new URLSearchParams(formData);
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbxEFaCMomQaDr0tKQtanf03mN36OlwrxlyNnv9BejyaTWlDQlECst9ve1NNeYH51alz/exec",
+    "https://script.google.com/macros/s/AKfycbx3gZizTBvcDuZ7QIZnLi50yOHExHk076K7SKsuCJ7GrdTHlioZ07Z7YNKodmXIINLq/exec",
     {
       method: "POST",
       mode: "no-cors", // GASへの送信でエラーが出にくい設定
@@ -27,5 +27,6 @@ form.addEventListener("submit", (e) => {
     alert("送信に失敗しました");
   });
 });
+
 
 
